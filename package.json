@@ -1,0 +1,20 @@
+{
+  "name": "gravity-signatures",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:gravity-technologies/gravity-signatures.git",
+  "author": "alaukiknpant <alaukikn.pant@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+  },
+  "devDependencies": {
+    "@metamask/eth-sig-util": "^7.0.1",
+    "@typechain/ethers-v5": "^11.1.2",
+    "@types/node": "^20.11.19",
+    "ethers": "^5.7.2",
+    "ts-node": "^10.9.2",
+    "typechain": "^8.3.2",
+    "typescript": "^4.9.5",
+    "zksync-ethers": "^5.0.0"
+  }
+}

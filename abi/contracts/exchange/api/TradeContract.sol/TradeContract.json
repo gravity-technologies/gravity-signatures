@@ -1,0 +1,460 @@
+{
+  "_format": "hh-zksolc-artifact-1",
+  "contractName": "TradeContract",
+  "sourceName": "contracts/exchange/api/TradeContract.sol",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint64",
+          "name": "subAccountID",
+          "type": "uint64"
+        },
+        {
+          "internalType": "int256",
+          "name": "value",
+          "type": "int256"
+        }
+      ],
+      "name": "InvalidTotalValue",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint8",
+          "name": "version",
+          "type": "uint8"
+        }
+      ],
+      "name": "Initialized",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "getLastTxID",
+      "outputs": [
+        {
+          "internalType": "uint64",
+          "name": "",
+          "type": "uint64"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "int64",
+          "name": "timestamp",
+          "type": "int64"
+        },
+        {
+          "internalType": "uint64",
+          "name": "txID",
+          "type": "uint64"
+        },
+        {
+          "internalType": "enum ConfigID",
+          "name": "key",
+          "type": "uint8"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "value",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint32",
+          "name": "nonce",
+          "type": "uint32"
+        },
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "signer",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "r",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "s",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "uint8",
+              "name": "v",
+              "type": "uint8"
+            },
+            {
+              "internalType": "int64",
+              "name": "expiration",
+              "type": "int64"
+            },
+            {
+              "internalType": "uint32",
+              "name": "nonce",
+              "type": "uint32"
+            }
+          ],
+          "internalType": "struct Signature",
+          "name": "sig",
+          "type": "tuple"
+        }
+      ],
+      "name": "setConfig",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "int64",
+          "name": "timestamp",
+          "type": "int64"
+        },
+        {
+          "internalType": "uint64",
+          "name": "txID",
+          "type": "uint64"
+        },
+        {
+          "components": [
+            {
+              "components": [
+                {
+                  "internalType": "uint64",
+                  "name": "subAccountID",
+                  "type": "uint64"
+                },
+                {
+                  "internalType": "bool",
+                  "name": "isMarket",
+                  "type": "bool"
+                },
+                {
+                  "internalType": "enum TimeInForce",
+                  "name": "timeInForce",
+                  "type": "uint8"
+                },
+                {
+                  "internalType": "uint64",
+                  "name": "limitPrice",
+                  "type": "uint64"
+                },
+                {
+                  "internalType": "uint64",
+                  "name": "ocoLimitPrice",
+                  "type": "uint64"
+                },
+                {
+                  "internalType": "uint32",
+                  "name": "takerFeePercentageCap",
+                  "type": "uint32"
+                },
+                {
+                  "internalType": "uint32",
+                  "name": "makerFeePercentageCap",
+                  "type": "uint32"
+                },
+                {
+                  "internalType": "bool",
+                  "name": "postOnly",
+                  "type": "bool"
+                },
+                {
+                  "internalType": "bool",
+                  "name": "reduceOnly",
+                  "type": "bool"
+                },
+                {
+                  "internalType": "bool",
+                  "name": "isPayingBaseCurrency",
+                  "type": "bool"
+                },
+                {
+                  "components": [
+                    {
+                      "internalType": "uint256",
+                      "name": "assetID",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint64",
+                      "name": "size",
+                      "type": "uint64"
+                    },
+                    {
+                      "internalType": "uint64",
+                      "name": "limitPrice",
+                      "type": "uint64"
+                    },
+                    {
+                      "internalType": "uint64",
+                      "name": "ocoLimitPrice",
+                      "type": "uint64"
+                    },
+                    {
+                      "internalType": "bool",
+                      "name": "isBuyingAsset",
+                      "type": "bool"
+                    }
+                  ],
+                  "internalType": "struct OrderLeg[]",
+                  "name": "legs",
+                  "type": "tuple[]"
+                },
+                {
+                  "internalType": "uint32",
+                  "name": "nonce",
+                  "type": "uint32"
+                },
+                {
+                  "components": [
+                    {
+                      "internalType": "address",
+                      "name": "signer",
+                      "type": "address"
+                    },
+                    {
+                      "internalType": "bytes32",
+                      "name": "r",
+                      "type": "bytes32"
+                    },
+                    {
+                      "internalType": "bytes32",
+                      "name": "s",
+                      "type": "bytes32"
+                    },
+                    {
+                      "internalType": "uint8",
+                      "name": "v",
+                      "type": "uint8"
+                    },
+                    {
+                      "internalType": "int64",
+                      "name": "expiration",
+                      "type": "int64"
+                    },
+                    {
+                      "internalType": "uint32",
+                      "name": "nonce",
+                      "type": "uint32"
+                    }
+                  ],
+                  "internalType": "struct Signature",
+                  "name": "signature",
+                  "type": "tuple"
+                }
+              ],
+              "internalType": "struct Order",
+              "name": "takerOrder",
+              "type": "tuple"
+            },
+            {
+              "components": [
+                {
+                  "components": [
+                    {
+                      "internalType": "uint64",
+                      "name": "subAccountID",
+                      "type": "uint64"
+                    },
+                    {
+                      "internalType": "bool",
+                      "name": "isMarket",
+                      "type": "bool"
+                    },
+                    {
+                      "internalType": "enum TimeInForce",
+                      "name": "timeInForce",
+                      "type": "uint8"
+                    },
+                    {
+                      "internalType": "uint64",
+                      "name": "limitPrice",
+                      "type": "uint64"
+                    },
+                    {
+                      "internalType": "uint64",
+                      "name": "ocoLimitPrice",
+                      "type": "uint64"
+                    },
+                    {
+                      "internalType": "uint32",
+                      "name": "takerFeePercentageCap",
+                      "type": "uint32"
+                    },
+                    {
+                      "internalType": "uint32",
+                      "name": "makerFeePercentageCap",
+                      "type": "uint32"
+                    },
+                    {
+                      "internalType": "bool",
+                      "name": "postOnly",
+                      "type": "bool"
+                    },
+                    {
+                      "internalType": "bool",
+                      "name": "reduceOnly",
+                      "type": "bool"
+                    },
+                    {
+                      "internalType": "bool",
+                      "name": "isPayingBaseCurrency",
+                      "type": "bool"
+                    },
+                    {
+                      "components": [
+                        {
+                          "internalType": "uint256",
+                          "name": "assetID",
+                          "type": "uint256"
+                        },
+                        {
+                          "internalType": "uint64",
+                          "name": "size",
+                          "type": "uint64"
+                        },
+                        {
+                          "internalType": "uint64",
+                          "name": "limitPrice",
+                          "type": "uint64"
+                        },
+                        {
+                          "internalType": "uint64",
+                          "name": "ocoLimitPrice",
+                          "type": "uint64"
+                        },
+                        {
+                          "internalType": "bool",
+                          "name": "isBuyingAsset",
+                          "type": "bool"
+                        }
+                      ],
+                      "internalType": "struct OrderLeg[]",
+                      "name": "legs",
+                      "type": "tuple[]"
+                    },
+                    {
+                      "internalType": "uint32",
+                      "name": "nonce",
+                      "type": "uint32"
+                    },
+                    {
+                      "components": [
+                        {
+                          "internalType": "address",
+                          "name": "signer",
+                          "type": "address"
+                        },
+                        {
+                          "internalType": "bytes32",
+                          "name": "r",
+                          "type": "bytes32"
+                        },
+                        {
+                          "internalType": "bytes32",
+                          "name": "s",
+                          "type": "bytes32"
+                        },
+                        {
+                          "internalType": "uint8",
+                          "name": "v",
+                          "type": "uint8"
+                        },
+                        {
+                          "internalType": "int64",
+                          "name": "expiration",
+                          "type": "int64"
+                        },
+                        {
+                          "internalType": "uint32",
+                          "name": "nonce",
+                          "type": "uint32"
+                        }
+                      ],
+                      "internalType": "struct Signature",
+                      "name": "signature",
+                      "type": "tuple"
+                    }
+                  ],
+                  "internalType": "struct Order",
+                  "name": "makerOrder",
+                  "type": "tuple"
+                },
+                {
+                  "internalType": "uint64[]",
+                  "name": "matchedSize",
+                  "type": "uint64[]"
+                },
+                {
+                  "internalType": "uint32",
+                  "name": "takerFeePercentageCharged",
+                  "type": "uint32"
+                },
+                {
+                  "internalType": "uint32",
+                  "name": "makerFeePercentageCharged",
+                  "type": "uint32"
+                }
+              ],
+              "internalType": "struct OrderMatch[]",
+              "name": "makerOrders",
+              "type": "tuple[]"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "assetID",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint64",
+                  "name": "markPrice",
+                  "type": "uint64"
+                },
+                {
+                  "internalType": "uint64",
+                  "name": "underlyingPrice",
+                  "type": "uint64"
+                },
+                {
+                  "internalType": "int32",
+                  "name": "riskFreeRate",
+                  "type": "int32"
+                }
+              ],
+              "internalType": "struct AssetTradeContext[]",
+              "name": "tradeContext",
+              "type": "tuple[]"
+            }
+          ],
+          "internalType": "struct Trade",
+          "name": "trade",
+          "type": "tuple"
+        }
+      ],
+      "name": "tradeDeriv",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "linkReferences": {},
+  "deployedLinkReferences": {},
+  "factoryDeps": {}
+}

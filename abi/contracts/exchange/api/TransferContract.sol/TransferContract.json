@@ -1,0 +1,284 @@
+{
+  "_format": "hh-zksolc-artifact-1",
+  "contractName": "TransferContract",
+  "sourceName": "contracts/exchange/api/TransferContract.sol",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint64",
+          "name": "subAccountID",
+          "type": "uint64"
+        },
+        {
+          "internalType": "int256",
+          "name": "value",
+          "type": "int256"
+        }
+      ],
+      "name": "InvalidTotalValue",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint8",
+          "name": "version",
+          "type": "uint8"
+        }
+      ],
+      "name": "Initialized",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "int64",
+          "name": "timestamp",
+          "type": "int64"
+        },
+        {
+          "internalType": "uint64",
+          "name": "txID",
+          "type": "uint64"
+        },
+        {
+          "internalType": "address",
+          "name": "accountID",
+          "type": "address"
+        },
+        {
+          "internalType": "enum Currency",
+          "name": "currency",
+          "type": "uint8"
+        },
+        {
+          "internalType": "uint64",
+          "name": "numTokens",
+          "type": "uint64"
+        },
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "signer",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "r",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "s",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "uint8",
+              "name": "v",
+              "type": "uint8"
+            },
+            {
+              "internalType": "int64",
+              "name": "expiration",
+              "type": "int64"
+            },
+            {
+              "internalType": "uint32",
+              "name": "nonce",
+              "type": "uint32"
+            }
+          ],
+          "internalType": "struct Signature",
+          "name": "sig",
+          "type": "tuple"
+        }
+      ],
+      "name": "deposit",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getLastTxID",
+      "outputs": [
+        {
+          "internalType": "uint64",
+          "name": "",
+          "type": "uint64"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "int64",
+          "name": "timestamp",
+          "type": "int64"
+        },
+        {
+          "internalType": "uint64",
+          "name": "txID",
+          "type": "uint64"
+        },
+        {
+          "internalType": "address",
+          "name": "fromAccount",
+          "type": "address"
+        },
+        {
+          "internalType": "uint64",
+          "name": "fromSubID",
+          "type": "uint64"
+        },
+        {
+          "internalType": "address",
+          "name": "toAccount",
+          "type": "address"
+        },
+        {
+          "internalType": "uint64",
+          "name": "toSubID",
+          "type": "uint64"
+        },
+        {
+          "internalType": "enum Currency",
+          "name": "currency",
+          "type": "uint8"
+        },
+        {
+          "internalType": "uint64",
+          "name": "numTokens",
+          "type": "uint64"
+        },
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "signer",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "r",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "s",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "uint8",
+              "name": "v",
+              "type": "uint8"
+            },
+            {
+              "internalType": "int64",
+              "name": "expiration",
+              "type": "int64"
+            },
+            {
+              "internalType": "uint32",
+              "name": "nonce",
+              "type": "uint32"
+            }
+          ],
+          "internalType": "struct Signature",
+          "name": "sig",
+          "type": "tuple"
+        }
+      ],
+      "name": "transfer",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "int64",
+          "name": "timestamp",
+          "type": "int64"
+        },
+        {
+          "internalType": "uint64",
+          "name": "txID",
+          "type": "uint64"
+        },
+        {
+          "internalType": "address",
+          "name": "fromAccountID",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "toEthAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "enum Currency",
+          "name": "currency",
+          "type": "uint8"
+        },
+        {
+          "internalType": "uint64",
+          "name": "numTokens",
+          "type": "uint64"
+        },
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "signer",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "r",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "s",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "uint8",
+              "name": "v",
+              "type": "uint8"
+            },
+            {
+              "internalType": "int64",
+              "name": "expiration",
+              "type": "int64"
+            },
+            {
+              "internalType": "uint32",
+              "name": "nonce",
+              "type": "uint32"
+            }
+          ],
+          "internalType": "struct Signature",
+          "name": "sig",
+          "type": "tuple"
+        }
+      ],
+      "name": "withdraw",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "linkReferences": {},
+  "deployedLinkReferences": {},
+  "factoryDeps": {}
+}
