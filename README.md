@@ -2,8 +2,7 @@
 
 ## Overview 
 
-Reference types for DFNS team that enumerates all [EIP-712 TypedData Signatures]
-(https://docs.dfns.co/d/api-docs/wallets/generate-signature-from-wallet/evm-generate-signature#eip712-signature-request-body-1) used in GRVT exchange.
+Reference types for DFNS team that enumerates all [EIP-712 TypedData Signatures](https://docs.dfns.co/d/api-docs/wallets/generate-signature-from-wallet/evm-generate-signature#eip712-signature-request-body-1) used in GRVT exchange.
 
 
 ## How to use this repository
